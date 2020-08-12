@@ -1,0 +1,18 @@
+import socket
+import time
+
+tello_address = ('192.168.10.1', 8889)
+sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+sock.bind(('192.168.10.2', 9000))
+send("command")
+receive()
+time.sleep(1)
+send("takeoff")
+time.sleep(5)
+send("forward 20")
+time.sleep(1)
+send("battery?")
+recieve()
+time.sleep(1)
+send("land")
+time.sleep(10)
