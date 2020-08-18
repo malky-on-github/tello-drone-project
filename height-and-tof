@@ -1,0 +1,48 @@
+import socket
+import time
+import system
+
+def send(message):
+  try:
+    sock.sendto(message.encode(), tello_address)
+    print("Sending message: " + message)
+  except Exception as e:
+    print("Error sending: " + str(e))
+	
+def receive():
+  try:
+    response, ip_address = sock.recvfrom(128)
+    print("Received message: " + response.decode(encoding='utf-8') + " from Tello with IP: " + str(ip_address))
+  except Exception as e:
+    print("Error receiving: " + str(e))
+	
+
+def timeofflight()
+	try:
+		send("tof?")
+		receive()
+		print("The drone has been flying for " + receive())
+		system('clear')
+	except:
+		print("There was an error receiving tof")
+		system('clear')
+
+while(1 != 2)
+{
+	timeofflight()
+}
+
+def height()
+	try:
+		send("height?")
+		receive()
+		print("The drone is " + receive() + " cm high")
+		system('clear')
+	except:
+		print("There was an error receiving height")
+		system('clear')
+
+while(1 != 2)
+{
+	height()
+}
