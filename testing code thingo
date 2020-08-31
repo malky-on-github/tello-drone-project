@@ -62,7 +62,7 @@ receive()
 if battery == 20
 
 then 
-break
+sned("land")
 emergency
 print("plz replace battery")   
 
